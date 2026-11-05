@@ -1,0 +1,104 @@
+[
+{
+  "id": "dj",
+  "source": "assets/source/dj.png",
+  "origin": "Generated with built-in image_gen tool, 2026-11-05",
+  "prompt": "Use case: editorial photography. Asset: high-resolution landscape 3:2 event photograph for Olivo, Cinema na Lapa. Close photograph of a professional DJ's realistic hands playing vinyl on two vintage record turntables on the outdoor terrace of a Rio Lapa cocktail bar at night. Warm orange and deep burgundy stage lighting, dark olive shadows, amber bokeh and small audience behind. Records and tonearm clearly visible, tactility and sharp detail. No bartender, no cocktail being poured, no typography, no watermark, no collage. Native output at least 1536 pixels wide."
+},
+  {
+    "id": "negroni",
+    "source": "assets/source/negroni.png",
+    "origin": "Generated with the built-in image_gen tool, 2026-11-05",
+    "prompt": "Use case: product photography. Asset: high resolution cocktail photograph for Olivo, a cinematic cocktail bar in Rio de Janeiro's Lapa. Portrait 4:5 composition, one beautiful crystal rocks glass with deep ruby amber Negroni, one large clear ice cube and orange peel. Glass centered fully in frame, fills 65% of image, enough space around rim and base to crop to square. Dark mahogany bar, out-of-focus warm amber lamps and burgundy shadows. Analog cinema mood, authentic realistic editorial drink photography, sharp rim and detailed condensation, rich restrained film texture without degrading detail. No people, no text, no watermarks, no collage. Generate at highest native resolution."
+  },
+  {
+    "id": "bossa",
+    "source": "assets/source/bossa.png",
+    "origin": "Generated with the built-in image_gen tool, 2026-11-05",
+    "prompt": "Use case: product photography. Asset: individual high-resolution portrait 4:5 cocktail card for Olivo, cinematic cocktail bar in Rio's Lapa. Subject: a pale golden elegant cocktail in a slender coupe glass, small green olive and fresh basil garnish, gin and white vermouth, delicate clear bubbles. Entire glass with stem and foot fully in frame, centered, occupying 65% of frame, with generous margin so square crop preserves glass. Dark mahogany bar, soft warm amber lamps and burgundy shadows in background. Authentic editorial photography, optically sharp glass and condensation, warm orange gold and olive palette, restrained film grain, no people, no text, no watermark, no collage. Highest native resolution."
+  },
+  {
+    "id": "verde",
+    "source": "assets/source/verde.png",
+    "origin": "Generated with the built-in image_gen tool, 2026-11-05",
+    "prompt": "Use case: product photography. Asset: individual high-resolution portrait 4:5 cocktail card for Olivo, cinematic cocktail bar in Rio's Lapa. Subject: a green fresh Brazilian cocktail in a tall ribbed highball glass, large ice cubes, fresh lime wedges and basil leaves, translucent pale green liquid. Entire glass with stem and foot fully in frame, centered, occupying 65% of frame, with generous margin so square crop preserves glass. Dark mahogany bar, soft warm amber lamps and burgundy shadows in background. Authentic editorial photography, optically sharp glass and condensation, warm orange gold and olive palette, restrained film grain, no people, no text, no watermark, no collage. Highest native resolution."
+  },
+  {
+    "id": "spritz",
+    "source": "assets/source/spritz.png",
+    "origin": "Generated with the built-in image_gen tool, 2026-11-05",
+    "prompt": "Use case: product photography. Asset: individual high-resolution portrait 4:5 cocktail card for Olivo, cinematic cocktail bar in Rio's Lapa. Subject: an orange spritz with clear ice cubes in a large elegant stemmed wine glass, fresh half orange slice, sparkling bubbles. Entire glass with stem and foot fully in frame, centered, occupying 65% of frame, with generous margin so square crop preserves glass. Dark mahogany bar, soft warm amber lamps and burgundy shadows in background. Authentic editorial photography, optically sharp glass and condensation, warm orange gold and olive palette, restrained film grain, no people, no text, no watermark, no collage. Highest native resolution."
+  },
+  {
+    "id": "leme",
+    "source": "assets/source/leme.png",
+    "origin": "Generated with the built-in image_gen tool, 2026-11-05",
+    "prompt": "Use case: product photography. Asset: individual high-resolution portrait 4:5 cocktail card for Olivo, cinematic cocktail bar in Rio's Lapa. Subject: a golden passionfruit cocktail in a shallow coupe glass, delicate foam, fresh rosemary sprig and a small lemon twist. Entire glass with stem and foot fully in frame, centered, occupying 65% of frame, with generous margin so square crop preserves glass. Dark mahogany bar, soft warm amber lamps and burgundy shadows in background. Authentic editorial photography, optically sharp glass and condensation, warm orange gold and olive palette, restrained film grain, no people, no text, no watermark, no collage. Highest native resolution."
+  },
+  {
+    "id": "madrugada",
+    "source": "assets/source/madrugada.png",
+    "origin": "Generated with the built-in image_gen tool, 2026-11-05",
+    "prompt": "Use case: product photography. Asset: individual high-resolution portrait 4:5 cocktail card for Olivo, cinematic cocktail bar in Rio's Lapa. Subject: a dark brown espresso cocktail in a conical martini glass, velvety beige crema and exactly three coffee beans on the surface. Entire glass with stem and foot fully in frame, centered, occupying 65% of frame, with generous margin so square crop preserves glass. Dark mahogany bar, soft warm amber lamps and burgundy shadows in background. Authentic editorial photography, optically sharp glass and condensation, warm orange gold and olive palette, restrained film grain, no people, no text, no watermark, no collage. Highest native resolution."
+  },
+  {
+    "id": "lapa",
+    "source": "assets/source/lapa.png",
+    "origin": "Generated with the built-in image_gen tool, 2026-11-05",
+    "prompt": "Use case: editorial photography. Asset: high-resolution website photograph for Olivo, Cinema na Lapa visual world. Landscape editorial photograph of a lively outdoor bar terrace beside Rio de Janeiro's Arcos da Lapa at sunset turning into night. Historic aqueduct arches correctly recognizable, palms, red parasols, small tables with friends conversing, warm amber practical lights, cinematic burnt orange sky, olive shadows. Wide establishing shot. Horizontal 3:2 full composition. Warm tungsten light, rich burnt orange, mahogany, olive black and cream highlights, realistic optical photography, fine subtle film texture preserving detail. No collage, no border, no watermark, no typography. At least 1536px wide native output."
+  },
+  {
+    "id": "cinema",
+    "source": "assets/source/cinema.png",
+    "origin": "Generated with the built-in image_gen tool, 2026-11-05",
+    "prompt": "Use case: editorial photography. Asset: high-resolution website photograph for Olivo, Cinema na Lapa visual world. Landscape editorial photograph of a vintage 35mm cinema projector and film reels in foreground, charming open air film screening on a Rio Lapa bar terrace at night, soft black and white movie projected in distance, seated audience shown from behind, amber and burgundy light. Avoid readable film text. Horizontal 3:2 full composition. Warm tungsten light, rich burnt orange, mahogany, olive black and cream highlights, realistic optical photography, fine subtle film texture preserving detail. No collage, no border, no watermark, no typography. At least 1536px wide native output."
+  },
+  {
+    "id": "samba",
+    "source": "assets/source/samba.png",
+    "origin": "Generated with the built-in image_gen tool, 2026-11-05",
+    "prompt": "Use case: editorial photography. Asset: high-resolution website photograph for Olivo, Cinema na Lapa visual world. Landscape close editorial photograph of musician hands playing a pandeiro at a small intimate Rio de Janeiro samba gathering, warm amber stage light, dark olive and burgundy bar interior, authentic tactile details, no distorted hands. Horizontal 3:2 full composition. Warm tungsten light, rich burnt orange, mahogany, olive black and cream highlights, realistic optical photography, fine subtle film texture preserving detail. No collage, no border, no watermark, no typography. At least 1536px wide native output."
+  },
+  {
+    "id": "jazz",
+    "source": "assets/source/jazz.png",
+    "origin": "Generated with the built-in image_gen tool, 2026-11-05",
+    "prompt": "Use case: editorial photography. Asset: high-resolution website photograph for Olivo, Cinema na Lapa visual world. Landscape editorial photograph of a Brazilian saxophonist and guitarist performing at an intimate vintage bar in Lapa Rio at night, warm amber stage lamps, olive shadows, mahogany, cinematic analog feel, realistic instruments. Horizontal 3:2 full composition. Warm tungsten light, rich burnt orange, mahogany, olive black and cream highlights, realistic optical photography, fine subtle film texture preserving detail. No collage, no border, no watermark, no typography. At least 1536px wide native output."
+  },
+  {
+    "id": "bar",
+    "source": "assets/source/bar.png",
+    "origin": "Generated with the built-in image_gen tool, 2026-11-05",
+    "prompt": "Use case: editorial photography. Asset: high-resolution website photograph for Olivo, Cinema na Lapa visual world. Landscape editorial photograph of an atmospheric classic cocktail bar in Rio's Lapa, dark wooden counter, brass lamps, amber illuminated bottles, a professional bartender wearing dark apron carefully pouring a cocktail, tactile glass details. Cozy and refined, no readable text. Horizontal 3:2 full composition. Warm tungsten light, rich burnt orange, mahogany, olive black and cream highlights, realistic optical photography, fine subtle film texture preserving detail. No collage, no border, no watermark, no typography. At least 1536px wide native output."
+  },
+  {
+    "id": "friends",
+    "source": "assets/source/friends.png",
+    "origin": "Generated with the built-in image_gen tool, 2026-11-05",
+    "prompt": "Use case: editorial photography. Asset: high-resolution website photograph for Olivo, Cinema na Lapa visual world. Landscape editorial photograph of three diverse Brazilian friends aged around thirty laughing and toasting with coupe cocktails at a cozy Lapa bar table at night, authentic candid moment, warm amber light, burgundy walls, cinematic photography. Horizontal 3:2 full composition. Warm tungsten light, rich burnt orange, mahogany, olive black and cream highlights, realistic optical photography, fine subtle film texture preserving detail. No collage, no border, no watermark, no typography. At least 1536px wide native output."
+  },
+  {
+    "id": "petiscos",
+    "source": "assets/source/petiscos.png",
+    "origin": "Generated with the built-in image_gen tool, 2026-11-05",
+    "prompt": "Use case: editorial photography. Asset: high-resolution website photograph for Olivo, Cinema na Lapa visual world. Landscape close food photograph of crisp golden Brazilian mini pastel pastries and codfish fritters on a ceramic plate, lime wedge and fresh herbs, warm dark mahogany bar table, cinematic amber lighting, crisp appetizing detail. Horizontal 3:2 full composition. Warm tungsten light, rich burnt orange, mahogany, olive black and cream highlights, realistic optical photography, fine subtle film texture preserving detail. No collage, no border, no watermark, no typography. At least 1536px wide native output."
+  },
+  {
+    "id": "moqueca",
+    "source": "assets/source/moqueca.png",
+    "origin": "Generated with the built-in image_gen tool, 2026-11-05",
+    "prompt": "Use case: editorial photography. Asset: high-resolution website photograph for Olivo, Cinema na Lapa visual world. Landscape close food photograph of Brazilian fish moqueca in a black clay pot, golden coconut broth, tomatoes, coriander and fish pieces, small rice bowl behind, cinematic warm mahogany bar table, sharp appetizing food detail. Horizontal 3:2 full composition. Warm tungsten light, rich burnt orange, mahogany, olive black and cream highlights, realistic optical photography, fine subtle film texture preserving detail. No collage, no border, no watermark, no typography. At least 1536px wide native output."
+  },
+  {
+    "id": "sobremesa",
+    "source": "assets/source/sobremesa.png",
+    "origin": "Generated with the built-in image_gen tool, 2026-11-05",
+    "prompt": "Use case: editorial photography. Asset: high-resolution website photograph for Olivo, Cinema na Lapa visual world. Landscape close food photograph of a molten dark chocolate petit gateau with vanilla ice cream on a handmade cream ceramic plate, glossy chocolate sauce, warm amber bar background, sharp appetizing texture. Horizontal 3:2 full composition. Warm tungsten light, rich burnt orange, mahogany, olive black and cream highlights, realistic optical photography, fine subtle film texture preserving detail. No collage, no border, no watermark, no typography. At least 1536px wide native output."
+  },
+  {
+    "id": "hero",
+    "source": "assets/source/hero.png",
+    "origin": "Generated with the built-in image_gen tool, 2026-11-05",
+    "prompt": "Edit this existing Olivo website hero artwork to restore fine photographic detail and deliver a high native resolution wide 16:9 image, ideally 2560 pixels wide or larger. Preserve exactly the overall cinematic collage composition: woman's face filling the LEFT third, realistic curly dark hair and amber skin, Rio's Lapa aqueduct in background RIGHT with orange lit arches and burgundy sunset, torn vintage paper portrait along far left edge, dark lower right negative space for HTML typography. Keep warmth, earthy orange/burgundy/olive shadows and original subject identity and mood, improve natural optical detail without heavy grain or artificial sharpening. Do not add any text, letters, logo, watermarks, frames or web UI. The input image is the edit target."
+  }
+]

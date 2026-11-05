@@ -1,0 +1,217 @@
+[
+  {
+    "route": "index",
+    "alt": "",
+    "density": 1.65
+  },
+  {
+    "route": "index",
+    "alt": "Negroni da Lapa",
+    "density": 4.31
+  },
+  {
+    "route": "index",
+    "alt": "Bossa Dourada",
+    "density": 4.5
+  },
+  {
+    "route": "index",
+    "alt": "Verde Olivo",
+    "density": 5.04
+  },
+  {
+    "route": "index",
+    "alt": "Olivo Spritz",
+    "density": 4.07
+  },
+  {
+    "route": "index",
+    "alt": "Pôr do Leme",
+    "density": 4.07
+  },
+  {
+    "route": "index",
+    "alt": "Última Sessão",
+    "density": 4.07
+  },
+  {
+    "route": "index",
+    "alt": "",
+    "density": 3.33
+  },
+  {
+    "route": "index",
+    "alt": "",
+    "density": 3.33
+  },
+  {
+    "route": "index",
+    "alt": "",
+    "density": 3.33
+  },
+  {
+    "route": "index",
+    "alt": "Mesas, encontros e Arcos da Lapa ao entardecer",
+    "density": 2.13
+  },
+  {
+    "route": "cardapio",
+    "alt": "",
+    "density": 2.05
+  },
+  {
+    "route": "cardapio",
+    "alt": "Negroni da Lapa",
+    "density": 11.11
+  },
+  {
+    "route": "cardapio",
+    "alt": "Bossa Dourada",
+    "density": 11.11
+  },
+  {
+    "route": "cardapio",
+    "alt": "Verde Olivo",
+    "density": 11.11
+  },
+  {
+    "route": "cardapio",
+    "alt": "Olivo Spritz",
+    "density": 11.11
+  },
+  {
+    "route": "cardapio",
+    "alt": "Pôr do Leme",
+    "density": 11.11
+  },
+  {
+    "route": "cardapio",
+    "alt": "Última Sessão",
+    "density": 11.11
+  },
+  {
+    "route": "cardapio",
+    "alt": "Petiscos",
+    "density": 2.65
+  },
+  {
+    "route": "cardapio",
+    "alt": "Pratos da casa",
+    "density": 2.65
+  },
+  {
+    "route": "cardapio",
+    "alt": "Sobremesas em cartaz",
+    "density": 2.65
+  },
+  {
+    "route": "programacao",
+    "alt": "",
+    "density": 1.62
+  },
+  {
+    "route": "programacao",
+    "alt": "Roda de Samba",
+    "density": 1.72
+  },
+  {
+    "route": "programacao",
+    "alt": "Jazz & Vermute",
+    "density": 1.72
+  },
+  {
+    "route": "programacao",
+    "alt": "DJ Set na Varanda",
+    "density": 1.72
+  },
+  {
+    "route": "programacao",
+    "alt": "",
+    "density": 4.64
+  },
+  {
+    "route": "programacao",
+    "alt": "",
+    "density": 4.64
+  },
+  {
+    "route": "programacao",
+    "alt": "",
+    "density": 4.64
+  },
+  {
+    "route": "programacao",
+    "alt": "",
+    "density": 4.64
+  },
+  {
+    "route": "programacao",
+    "alt": "",
+    "density": 4.64
+  },
+  {
+    "route": "programacao",
+    "alt": "Mesas, encontros e Arcos da Lapa ao entardecer",
+    "density": 2.13
+  },
+  {
+    "route": "galeria",
+    "alt": "",
+    "density": 2.21
+  },
+  {
+    "route": "galeria",
+    "alt": "Negroni com gelo e laranja sob luz âmbar",
+    "density": 2.93
+  },
+  {
+    "route": "galeria",
+    "alt": "A noite começa nos arcos",
+    "density": 2.06
+  },
+  {
+    "route": "galeria",
+    "alt": "O cuidado por trás do balcão",
+    "density": 2.06
+  },
+  {
+    "route": "galeria",
+    "alt": "A trilha da nossa noite",
+    "density": 2.06
+  },
+  {
+    "route": "galeria",
+    "alt": "Bossa Dourada em cena",
+    "density": 2.88
+  },
+  {
+    "route": "galeria",
+    "alt": "O melhor roteiro é o encontro",
+    "density": 2.06
+  },
+  {
+    "route": "galeria",
+    "alt": "O ritmo da Lapa",
+    "density": 2.06
+  },
+  {
+    "route": "galeria",
+    "alt": "Negroni, nosso protagonista",
+    "density": 2.88
+  },
+  {
+    "route": "galeria",
+    "alt": "Cinema sob o céu do Rio",
+    "density": 2.06
+  },
+  {
+    "route": "galeria",
+    "alt": "Um lugar para ficar",
+    "density": 2.06
+  },
+  {
+    "route": "contato",
+    "alt": "",
+    "density": 2.21
+  }
+]

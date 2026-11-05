@@ -1,0 +1,146 @@
+[
+  {
+    "device": "desktop",
+    "route": "index",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 1598,
+    "broken": [],
+    "overflow": []
+  },
+  {
+    "device": "desktop",
+    "route": "cardapio",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 2767,
+    "broken": [],
+    "overflow": []
+  },
+  {
+    "device": "desktop",
+    "route": "programacao",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 1918,
+    "broken": [],
+    "overflow": []
+  },
+  {
+    "device": "desktop",
+    "route": "galeria",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 1728,
+    "broken": [],
+    "overflow": []
+  },
+  {
+    "device": "desktop",
+    "route": "contato",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 1749,
+    "broken": [],
+    "overflow": []
+  },
+  {
+    "device": "mobile",
+    "route": "index",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 1902,
+    "broken": [],
+    "overflow": []
+  },
+  {
+    "device": "mobile",
+    "route": "cardapio",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 1963,
+    "broken": [],
+    "overflow": []
+  },
+  {
+    "device": "mobile",
+    "route": "programacao",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 2788,
+    "broken": [],
+    "overflow": []
+  },
+  {
+    "device": "mobile",
+    "route": "galeria",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 2453,
+    "broken": [],
+    "overflow": []
+  },
+  {
+    "device": "mobile",
+    "route": "contato",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 2794,
+    "broken": [],
+    "overflow": []
+  },
+  {
+    "device": "tablet",
+    "route": "index",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 1349,
+    "broken": [],
+    "overflow": []
+  },
+  {
+    "device": "tablet",
+    "route": "cardapio",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 3208,
+    "broken": [],
+    "overflow": []
+  },
+  {
+    "device": "tablet",
+    "route": "programacao",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 2027,
+    "broken": [],
+    "overflow": []
+  },
+  {
+    "device": "tablet",
+    "route": "galeria",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 1816,
+    "broken": [],
+    "overflow": []
+  },
+  {
+    "device": "tablet",
+    "route": "contato",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 1846,
+    "broken": [],
+    "overflow": []
+  },
+  {
+    "device": "boundary",
+    "route": "cardapio",
+    "width": 701,
+    "scrollWidth": 701,
+    "height": 3210,
+    "broken": [],
+    "overflow": []
+  }
+]
