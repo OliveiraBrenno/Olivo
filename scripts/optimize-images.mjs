@@ -11,10 +11,10 @@ for (const image of manifest) {
   const source = fileURLToPath(new URL(image.source,root));
   const meta = await sharp(source).metadata();
   sizes[image.id] = { width:meta.width, height:meta.height };
-  const widths = image.id === 'hero' ? [960,1440,2400] : [480,960,1440];
+  const widths = image.widths || (image.id === 'hero' ? [960,1440,2400] : image.id === 'hero-home-mobile' ? [640,900] : [480,960,1440]);
   for (const width of widths) {
     await sharp(source).resize({width,withoutEnlargement:true}).webp({quality:88,effort:5})
-      .withMetadata({exif:{IFD0:{ImageDescription:image.prompt,Artist:'OpenAI image_gen; Olivo concept'}}})
+      .withMetadata({exif:{IFD0:{ImageDescription:image.prompt,Artist:image.origin === 'user-supplied' ? 'User supplied artwork' : 'OpenAI image_gen; Olivo concept'}}})
       .toFile(fileURLToPath(new URL(`assets/photos/${image.id}-${width}.webp`,root)));
   }
   if (image.id === 'hero') {
@@ -32,7 +32,7 @@ await writeFile(new URL('assets/image-dimensions.json',root),JSON.stringify(size
 const provenanceTool = fileURLToPath(new URL('../.agents/skills/impeccable/scripts/impeccable',root));
 try {
   for (const image of manifest) {
-    const widths = image.id === 'hero' ? [960,1440,2400] : [480,960,1440];
+    const widths = image.widths || (image.id === 'hero' ? [960,1440,2400] : image.id === 'hero-home-mobile' ? [640,900] : [480,960,1440]);
     const paths = [image.source,...widths.map(width=>`assets/photos/${image.id}-${width}.webp`)];
     if(image.id==='hero') paths.push('assets/photos/hero-mobile-640.webp','assets/photos/hero-mobile-960.webp');
     for(const path of paths) execFileSync(provenanceTool,['embed-prompt',fileURLToPath(new URL(path,root)),'--prompt',image.prompt],{stdio:'pipe'});

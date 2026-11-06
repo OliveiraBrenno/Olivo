@@ -1,10 +1,10 @@
 [
-{
-  "id": "dj",
-  "source": "assets/source/dj.png",
-  "origin": "Generated with built-in image_gen tool, 2026-11-05",
-  "prompt": "Use case: editorial photography. Asset: high-resolution landscape 3:2 event photograph for Olivo, Cinema na Lapa. Close photograph of a professional DJ's realistic hands playing vinyl on two vintage record turntables on the outdoor terrace of a Rio Lapa cocktail bar at night. Warm orange and deep burgundy stage lighting, dark olive shadows, amber bokeh and small audience behind. Records and tonearm clearly visible, tactility and sharp detail. No bartender, no cocktail being poured, no typography, no watermark, no collage. Native output at least 1536 pixels wide."
-},
+  {
+    "id": "dj",
+    "source": "assets/source/dj.png",
+    "origin": "Generated with built-in image_gen tool, 2026-11-05",
+    "prompt": "Use case: editorial photography. Asset: high-resolution landscape 3:2 event photograph for Olivo, Cinema na Lapa. Close photograph of a professional DJ's realistic hands playing vinyl on two vintage record turntables on the outdoor terrace of a Rio Lapa cocktail bar at night. Warm orange and deep burgundy stage lighting, dark olive shadows, amber bokeh and small audience behind. Records and tonearm clearly visible, tactility and sharp detail. No bartender, no cocktail being poured, no typography, no watermark, no collage. Native output at least 1536 pixels wide."
+  },
   {
     "id": "negroni",
     "source": "assets/source/negroni.png",
@@ -100,5 +100,163 @@
     "source": "assets/source/hero.png",
     "origin": "Generated with the built-in image_gen tool, 2026-11-05",
     "prompt": "Edit this existing Olivo website hero artwork to restore fine photographic detail and deliver a high native resolution wide 16:9 image, ideally 2560 pixels wide or larger. Preserve exactly the overall cinematic collage composition: woman's face filling the LEFT third, realistic curly dark hair and amber skin, Rio's Lapa aqueduct in background RIGHT with orange lit arches and burgundy sunset, torn vintage paper portrait along far left edge, dark lower right negative space for HTML typography. Keep warmth, earthy orange/burgundy/olive shadows and original subject identity and mood, improve natural optical detail without heavy grain or artificial sharpening. Do not add any text, letters, logo, watermarks, frames or web UI. The input image is the edit target."
+  },
+  {
+    "id": "hero-home-mobile",
+    "source": "assets/source/hero-home-mobile-v1.png",
+    "prompt": "Use case: ads-marketing. Create a finished portrait photographic hero BACKGROUND IMAGE for the mobile homepage of Olivo, a cocktail bar in Lapa, Rio de Janeiro, with the identity 'cinema, drinks and bohemia'. Portrait 9:19 composition suitable for a full-height phone screen, high resolution. NOT a website mockup: only the image, absolutely no text, lettering, logos, UI or buttons. An art-directed, evocative editorial 35mm film photograph at blue hour becoming night: a magnificent amber negroni in a low heavy crystal tumbler with one large ice cube and fresh orange peel on a worn dark wooden bar, and a smaller elegant golden Brazilian cocktail slightly behind it; beautifully clear and appetizing, natural condensation, no synthetic gloss. Place the drinks in the UPPER central third, between 15% and 43% of image height, completely visible within central 65% of image width. Behind them the unmistakable white aqueduct Arcos da Lapa in warm nighttime illumination, a subtle small outdoor cinema projection on the upper right wall of the courtyard, ambient silhouettes of a few adult friends chatting at tables, not looking at camera and no dominant faces. This must feel like a welcoming cultured Carioca bar, not a nightclub or stock portrait. Cinematic warm tungsten light, rich burnt amber, oxblood accents, deep olive and tobacco browns; analog editorial magazine art direction with subtle organic film grain. Cohesive single photographic scene, not crude pasted collage or scrapbook objects. Top 12% subdued dark olive for a cream logo and navigation added later in HTML. The lower half must gradually become a quiet dark tobacco wooden surface / soft defocused room, giving clean dark negative space for large cream typography placed on the LOWER LEFT (50%-76% image height), a small caption on lower right, and a button at 90%. Keep interesting illuminated drinks and architecture in upper half; DO NOT put bright glasses or foreground objects behind the lower-left type zone. No writing anywhere, no tickets, fake paper labels, floating film reels or decorative icons. Polished, tangible film photography, realistic glass and liquid, atmospheric but clear; no exaggerated vignette, no portrait of a woman. This is a new independent mobile-only background for the existing website.",
+    "tool": "image_gen",
+    "usage": "Home only, viewport up to 700px. Concept image, not an authentic venue photograph."
+  },
+  {
+    "id": "hero-home-mobile-vintage",
+    "source": "assets/source/hero-home-mobile-vintage.png",
+    "widths": [
+      640,
+      900
+    ],
+    "prompt": "Use the attached Olivo mockup ONLY as reference for visual art direction: ANALOG VINTAGE MAGAZINE PRINTED COLLAGE, clearly visible coarse offset halftone dots in the midtones, slightly misregistered oxblood/ochre inks, aged uncoated paper fibers, distressed ink and gently weathered photo edges. Deep olive-black, burnt orange, oxblood, warm yellowed paper. It must unmistakably look like an actual 1970s Brazilian cultural magazine spread / cinema street poster collage scanned in high resolution, NOT a clean contemporary commercial photograph with a faint filter. Keep the optical detail of glass, liquid and orange peel crisp within the printing treatment. Integrate the montage expertly, with layered PRINTED photograph clippings and a few torn vintage paper fragments along the margins, not floating objects or shadows pretending pasted paper. No text, logos, fake letters, watermarks, words, buttons, UI, full-page screenshot, mockup margins or phone frame. Output only a finished banner BACKGROUND. No dominant woman portrait. Main story: cocktail bar, the illuminated Arcos da Lapa, open-air cinema and warm Carioca bohemia. Do not duplicate any text from the reference. MOBILE ART DIRECTION: portrait 9:19 high-resolution. Upper half (12%-45% height) is a bold print collage of two beautiful Brazilian cocktails on a wooden bar: amber negroni with orange peel front and golden coupe behind, the glowing Lapa arches and a small courtyard projection screen with an indistinct old black-and-white film, a few tiny silhouettes of adult friends. These elements must be large enough to read at 320px width. The upper 10% is deep dark olive for a cream logo. LOWER HALF (50%-100%) is a textured dark oxblood/olive printed magazine surface, integrated into the photographic collage, with subdued tactile aging but no bright objects: HTML cream title will overlay left at 50%-76%, small caption lower right, button at 90%. Keep cocktails ABOVE this text zone. Torn cream and oxblood poster fragments may appear on far left/right edges only, narrow enough not to interfere. Strong tactile printed editorial quality matching the reference, warm, cinematic, welcoming, deliberate composition, not random clutter.\n",
+    "tool": "image_gen",
+    "reference": "Olivo_Cinema_na_Lapa/01_Home_Desktop_Mobile.png",
+    "usage": "Home background only; generated concept, not documentary venue photography."
+  },
+  {
+    "id": "hero-home-desktop-vintage",
+    "source": "assets/source/hero-home-desktop-vintage.png",
+    "widths": [
+      960,
+      1440,
+      1672
+    ],
+    "prompt": "Use the attached Olivo mockup ONLY as reference for visual art direction: ANALOG VINTAGE MAGAZINE PRINTED COLLAGE, clearly visible coarse offset halftone dots in the midtones, slightly misregistered oxblood/ochre inks, aged uncoated paper fibers, distressed ink and gently weathered photo edges. Deep olive-black, burnt orange, oxblood, warm yellowed paper. It must unmistakably look like an actual 1970s Brazilian cultural magazine spread / cinema street poster collage scanned in high resolution, NOT a clean contemporary commercial photograph with a faint filter. Keep the optical detail of glass, liquid and orange peel crisp within the printing treatment. Integrate the montage expertly, with layered PRINTED photograph clippings and a few torn vintage paper fragments along the margins, not floating objects or shadows pretending pasted paper. No text, logos, fake letters, watermarks, words, buttons, UI, full-page screenshot, mockup margins or phone frame. Output only a finished banner BACKGROUND. No dominant woman portrait. Main story: cocktail bar, the illuminated Arcos da Lapa, open-air cinema and warm Carioca bohemia. Do not duplicate any text from the reference. DESKTOP ART DIRECTION: wide 16:9 high-resolution. Build an evocative asymmetrical magazine collage: two appetizing cocktails dominate LEFT THIRD between x10%-36%, negroni amber with orange peel and elegant golden coupe, foreground wooden bar, torn cinema poster paper at far left edge. Illuminated Arcos da Lapa and small open-air cinema scene sweep along the right third against a burgundy dusk sky; tiny silhouettes of adult friends at tables and warm lamps. The CENTRAL zone x43%-75% must remain DARK, restrained and readable: existing cream calligraphic logo overlays x43%-75%, y13%-40%; title overlays x44%-72%, y46%-78%. No large bright subjects in those zones. Far right x76%-95% y65%-85% subdued for small cream caption. Bottom x55%-80%, y87%-98% quiet for CTA. Integrate image and printing texture across whole composition, avoid plain blank rectangles. Visible halftone, worn ink, subtle layered collage margins like the mockup; a beautiful authored cultural magazine spread. Strong sense of bar and Lapa rather than a random portrait.\n\nFollow-up edit: Edit this banner artwork. Remove ALL typography and lettering from the central dark panel: remove the large Olivo logo, the words DRINKS CULTURA E BOEMIA, the entire cream EM CARTAZ paper strip, and the thin horizontal line below it. Replace these regions with continuous aged dark olive/oxblood magazine paper texture matching the surrounding panel, with subtle print wear and halftone and a quiet integrated transition to the photography. The whole central panel must be EMPTY OF WORDS AND LIGHT PAPER LABELS, dark readable negative space for actual website HTML text. Keep EXACTLY the two cocktail glasses at left, the collage torn paper margins, the cinema projector illustration at far left, the Arcos da Lapa at right, the outdoor cinema projection and seated audience, and all the rich vintage offset print art direction, colors, paper texture, framing and wide aspect ratio. No new objects, no words, no logo, no lettering, no UI, no placeholder lines. This is a text-free website background, not a finished poster with baked-in words.\n",
+    "tool": "image_gen",
+    "reference": "Olivo_Cinema_na_Lapa/01_Home_Desktop_Mobile.png",
+    "usage": "Home background only; generated concept, not documentary venue photography."
+  },
+  {
+    "id": "hero-home-desktop-vintage-portrait",
+    "source": "assets/source/hero-home-desktop-vintage-portrait.png",
+    "widths": [
+      960,
+      1440,
+      1672
+    ],
+    "prompt": "EDIT TARGET is image 1, the ORIGINAL Olivo banner featuring a woman on the LEFT. Image 2 is STYLE REFERENCE ONLY (the website mockup). Preserve the exact identity, face, gaze, dark curly hair, gold hoop earring and pose of the woman in image 1, preserve her scale and placement across the left 40%, and preserve the illuminated Arcos da Lapa on the right, burgundy dusk sky, silhouettes of leaves overhead and torn illustrated portrait poster at the far left margin. DO NOT replace the woman with cocktails or add cocktail glasses. Make the ORIGINAL concept visibly more stylized, with the analog printed collage aesthetic of image 2: 1970s Brazilian cultural magazine / street cinema poster, tactile aged uncoated paper, warm amber skin as offset-printed photography with fine visible halftone dots, grainy ink, slightly misregistered warm oxblood/ochre tones, layered torn poster scraps along far-left and bottom margins. Authored, refined printed photo montage, clear expressive face and bright illuminated arches, not a clean stock photograph with a mild filter and not muddy or destroyed. Preserve a restrained deep olive/brown central-right zone at x43%-75% for live cream HTML logo and title; small caption overlays x76%-95%,y65%-85%, so keep its background subdued. The entire output MUST be a TEXT-FREE background: no logo, letters, words, typography, title strips, labels, buttons, UI or website screenshot; do not copy any lettering or UI from the mockup. Output wide 16:9, high resolution, same composition as image 1, woman's face is essential. Printed vintage magazine collage, no baked-in text.\n",
+    "tool": "image_gen",
+    "reference": "Olivo_Cinema_na_Lapa/01_Home_Desktop_Mobile.png",
+    "usage": "Home desktop background preserving original portrait"
+  },
+  {
+    "id": "bossa-collage",
+    "source": "assets/source/bossa-collage.png",
+    "widths": [
+      480,
+      960,
+      1440
+    ],
+    "prompt": "Image 1 is the EDIT TARGET: the supplied photograph of a golden cocktail in a long-stemmed coupe, an olive with metal pick and two fresh green basil leaves. Image 2 is STYLE REFERENCE ONLY: Olivo's magazine collage mockup. Recreate this specific golden drink with the exact recognizable glass shape, elegant thin long stem, golden sparkling liquid, olive, cocktail pick and basil garnish intact. Keep the drink beautiful, realistic and sharply defined, then incorporate it into an authored vintage editorial COLLAGE matching the mockup's golden cocktail section. The coupe should look like a carefully cut-out printed photographic clipping, integrated with warm torn cream/ochre paper at lower-left, a fragment of black-and-white Arcos da Lapa photography, a narrow vintage filmstrip edge near far left, oxblood ink scraps and deep olive magazine paper background. No floating miniature full drinks; one hero cocktail only. Build a rich, coherent tactile 1970s Brazilian cultural magazine composition with offset halftone in shadows, ink wear, grainy uncoated paper and warm amber light. Keep the drink's translucent glass rim, liquid bubbles and garnish detailed; texture should read as printed art direction, not blurry low resolution. Portrait 4:5 composition, glass entirely visible including garnish and base, occupying central 65% width and 14%-88% height with clear margins for responsive cropping. No words, typography, labels, brands, logos, buttons or UI. Style reference's page borders and text are NOT part of the output. This is a standalone image for the home coquetéis autorais visual column; typography and card photos are separate.\n",
+    "tool": "image_gen",
+    "reference": "Olivo_Cinema_na_Lapa/01_Home_Desktop_Mobile.png",
+    "usage": "Home cocktail still only; preserves menu and gallery photographs"
+  },
+  {
+    "id": "hero-home-desktop-vintage-mockup",
+    "source": "assets/source/hero-home-desktop-vintage-mockup.png",
+    "widths": [
+      960,
+      1440,
+      1672
+    ],
+    "prompt": "Create ONLY a wide 16:9 BACKGROUND ARTWORK, high resolution, for the Olivo desktop homepage hero. Image 1 shows the approved mockup: the TOP DESKTOP BANNER in the central website column is the literal visual target, not loose inspiration. Image 2 is the original text-free banner source preserving the woman's identity and composition. Recreate that original desktop banner image as close as possible to the TOP BANNER in image 1, but WITHOUT ANY of the website typography, logos, paper title strips, navigation or buttons. Output only the underlying photographic collage, not a website mockup. Essential composition: same woman's large warm amber portrait in the LEFT 40%, dark curly hair, tilted face looking up/right, softly closed eyes and gold hoop earring; a narrow torn old printed female portrait poster runs down the FAR LEFT EDGE only. Illuminated Arcos da Lapa sweep across the RIGHT HALF with burgundy/muted dusty rose dusk sky above, silhouettes of leaves overhead, dim bohemian street lights and little umbrellas below. The central x43%-75% region must be very DARK and quiet for cream HTML logo and title, as in the reference. Bottom-right must be deep near-black warm brown, not foggy olive gray. Match the reference's shadow DEPTH: strong true blacks in hair, underneath chin, street and foliage, with dimensional soft highlight rolloff on skin; don't lift the blacks. Match the mockup's muted vintage ink palette, not oversaturated orange/red. Warm bronze/amber skin, subdued burgundy sky, dusty ochre arch light; filmic editorial contrast, NO added saturation. Precise vintage printed magazine treatment: organic 35mm photographic grain, fine irregular offset halftone where appropriate, actual rough uncoated paper, worn ink, convincing restrained collage at far left. No heavy ornate paper border across bottom, no decorative red collage strips around every edge. NO artificial fingerprint/swirl pattern on the face; facial skin is real with subtle photographic grain, not embossed paper. Preserve the woman's likeness and authentic anatomy. Her earring MUST be a simple single smooth oval gold hoop with a natural attachment to the earlobe and consistent metal thickness, no doubled/melted ring or malformed stud. Do not add drinks or unrelated objects. Do not include ANY letters, words, logo, title, text strips, UI, frames, device mockups or mockup explanatory annotations. Wide high quality text-free photographic background, faithful to the original mockup banner composition and print finish.\n\nLocalized correction: Image 1 is the final desktop banner EDIT TARGET, preserve it. Image 2 shows the correct simple earring shape as a DETAIL REFERENCE ONLY. Correct ONLY the earring in image 1 to match the clean single oval hoop visible in image 2. Remove the extra gold strand/doubled inner band and malformed large stud of image 1. ONE smooth continuous gold tube forming one oval hoop, unobstructed dark hair in the opening, a small natural connection at the earlobe. Match image 1's dark warm photographic lighting and size. Do not alter contrast, shadows, skin, face, hair, sky, foliage, arches, poster collage, framing or paper texture anywhere else. Specifically keep the DEEP BLACKS of image 1, do not lift the shadows or increase saturation. No new typography or objects. This is localized jewelry retouching only; output full original wide banner.\n",
+    "tool": "image_gen",
+    "reference": "Olivo_Cinema_na_Lapa/01_Home_Desktop_Mobile.png",
+    "usage": "Desktop home background. Faithful portrait composition, deeper native shadows, corrected single hoop earring."
+  },
+  {
+    "id": "cocktails-continuous",
+    "source": "assets/source/cocktails-continuous.png",
+    "widths": [
+      960,
+      1440,
+      2172
+    ],
+    "prompt": "Create ONE continuous full-width BACKGROUND ARTWORK for Olivo's cocktail section, faithfully matching the continuous background shown in image 1. Image 1 is the layout/art-direction reference: ONLY its background is wanted, absolutely NOT the texts, cards, glass photos on the right, navigation arrows, buttons or any UI. Image 2 provides the existing golden cocktail's appearance. Output a very wide 3:1 panoramic image (high resolution). LEFT 0%-30%: one beautiful large golden cocktail in an elegant long-stem coupe, with green basil leaves, olive and metal pick. The full glass from garnish to base fits between y14%-86% for cropping. Place it around x18% and keep it all within left 30%. Behind it a wooden bar plane with amber light and soft shadows, a narrow black vintage filmstrip at far left and a small torn monochrome photograph of Arcos da Lapa near lower left, like image 1. A tiny cream/oxblood paper scrap at extreme bottom left is enough; no large colored poster borders. CENTER AND RIGHT x32%-100%: the same continuous physical scene transitions organically into deep olive/black worn magazine paper with a gentle photographic leaf shadow, quiet readable space. This should flow behind live website title at x33%-57% and live carousel cards at x61%-99%. The right two thirds MUST be clear dark olive texture ONLY: no baked-in text, no cocktail glasses, no cards, no buttons, no panels. No visible seam or vertical edge at x30%; the tabletop, light, grain and olive tones naturally span the entire canvas. A refined vintage Brazilian cultural magazine collage: organic film grain, subtly aged uncoated paper, printed photographic cutout cocktail with sharp realistic glass detail, amber highlights, restrained olive/ochre palette, deep shadows, moderate saturation. Match image 1's actual background composition closely, not the ornate red-bordered portrait format of image 2. No words, lettering, logos, typography, web UI, watermarks, rounded photo cards or white outlines. One continuous scene across the entire wide image, made to sit beneath HTML content.\n",
+    "tool": "image_gen",
+    "usage": "Continuous full-width background for home cocktail section, no raster UI or text."
+  },
+  {
+    "id": "hero-home-desktop-supplied",
+    "source": "assets/source/hero-home-desktop-supplied.png",
+    "widths": [
+      960,
+      1440,
+      1672
+    ],
+    "origin": "user-supplied",
+    "originalFilename": "banner .png",
+    "prompt": "User-supplied artwork; no generation prompt. Original imported unchanged; responsive WebP exports only."
+  },
+  {
+    "id": "hero-home-mobile-supplied",
+    "source": "assets/source/hero-home-mobile-supplied.png",
+    "widths": [
+      640,
+      909
+    ],
+    "origin": "user-supplied",
+    "originalFilename": "banner mobile .png",
+    "prompt": "User-supplied artwork; no generation prompt. Original imported unchanged; responsive WebP exports only."
+  },
+  {
+    "id": "lapa-vintage-decor",
+    "source": "assets/source/lapa-vintage-decor.png",
+    "widths": [
+      480,
+      960,
+      1440
+    ],
+    "prompt": "Image 1 is the PHOTO EDIT TARGET; image 2 is the APPROVED VINTAGE BANNER STYLE REFERENCE. Apply exactly the reference's photographic print finish to image 1: deep warm blacks, muted burgundy/amber/ochre tones, organic visible 35mm grain, aged uncoated paper fibers and a few natural faint creases and rubbed ink marks. The reference is the user's chosen finish, so match its grain size, paper wear, warmth and shadow density. Preserve original composition, recognizable subjects, optical details and anatomy; do not invent extra people, objects or poster scenes. Do not boost saturation; deepen shadow contrast while retaining detail and color restraint. No artificial embossed swirls/fingerprint texture on faces. A narrow organically torn old cream/oxblood printed paper edge can appear at FAR LEFT only, integrated like the banner; no thick full frame, no labels, no words, logos, typography, numbers, web UI or watermarks. This is a decorative photographic asset for the existing site; the website's real photos and all HTML content stay separate. Landscape 3:2. Preserve the courtyard tables, adult friends, umbrellas, palms and Arcos da Lapa. It must work as a continuous wide decorative background behind live HTML, keep the right third comparatively dark and subdued. Preserve human faces and hands naturally.\n",
+    "tool": "image_gen",
+    "styleReference": "assets/source/hero-home-desktop-supplied.png",
+    "usage": "Decorative artwork only; original menu, event cards and gallery photos preserved."
+  },
+  {
+    "id": "bossa-vintage-decor",
+    "source": "assets/source/bossa-vintage-decor.png",
+    "widths": [
+      480,
+      960,
+      1440
+    ],
+    "prompt": "Image 1 is the PHOTO EDIT TARGET; image 2 is the APPROVED VINTAGE BANNER STYLE REFERENCE. Apply exactly the reference's photographic print finish to image 1: deep warm blacks, muted burgundy/amber/ochre tones, organic visible 35mm grain, aged uncoated paper fibers and a few natural faint creases and rubbed ink marks. The reference is the user's chosen finish, so match its grain size, paper wear, warmth and shadow density. Preserve original composition, recognizable subjects, optical details and anatomy; do not invent extra people, objects or poster scenes. Do not boost saturation; deepen shadow contrast while retaining detail and color restraint. No artificial embossed swirls/fingerprint texture on faces. A narrow organically torn old cream/oxblood printed paper edge can appear at FAR LEFT only, integrated like the banner; no thick full frame, no labels, no words, logos, typography, numbers, web UI or watermarks. This is a decorative photographic asset for the existing site; the website's real photos and all HTML content stay separate. Portrait 4:5. Preserve the exact single golden coupe, olive, metal pick, basil garnish, thin stem and base. Entire glass visible within 12%-88% image height. Keep the bar interior background, which may blend subtly into dark olive/burgundy aged paper. Tangible luminous drink, clear bubbles and rim, no malformed glass or extra garnish.\n",
+    "tool": "image_gen",
+    "styleReference": "assets/source/hero-home-desktop-supplied.png",
+    "usage": "Decorative artwork only; original menu, event cards and gallery photos preserved."
+  },
+  {
+    "id": "cinema-vintage-decor",
+    "source": "assets/source/cinema-vintage-decor.png",
+    "widths": [
+      480,
+      960,
+      1440
+    ],
+    "prompt": "Image 1 is the PHOTO EDIT TARGET; image 2 is the APPROVED VINTAGE BANNER STYLE REFERENCE. Apply exactly the reference's photographic print finish to image 1: deep warm blacks, muted burgundy/amber/ochre tones, organic visible 35mm grain, aged uncoated paper fibers and a few natural faint creases and rubbed ink marks. The reference is the user's chosen finish, so match its grain size, paper wear, warmth and shadow density. Preserve original composition, recognizable subjects, optical details and anatomy; do not invent extra people, objects or poster scenes. Do not boost saturation; deepen shadow contrast while retaining detail and color restraint. No artificial embossed swirls/fingerprint texture on faces. A narrow organically torn old cream/oxblood printed paper edge can appear at FAR LEFT only, integrated like the banner; no thick full frame, no labels, no words, logos, typography, numbers, web UI or watermarks. This is a decorative photographic asset for the existing site; the website's real photos and all HTML content stay separate. Landscape 3:2. Preserve the vintage film projector on left, screen and seated audience on right, warm courtyard and Lapa arches. Fine photographic print grain and paper wear, clear recognizable projector; the screen's black-and-white cinema imagery remains natural and slightly soft as in the source.\n",
+    "tool": "image_gen",
+    "styleReference": "assets/source/hero-home-desktop-supplied.png",
+    "usage": "Decorative artwork only; original menu, event cards and gallery photos preserved."
+  },
+  {
+    "id": "cocktails-continuous-vintage",
+    "source": "assets/source/cocktails-continuous-vintage.png",
+    "widths": [
+      960,
+      1440,
+      2172
+    ],
+    "prompt": "Image 1 is the EDIT TARGET, a continuous panoramic background for the cocktail section. Image 2 is the APPROVED PRINT STYLE REFERENCE. Preserve every element of image 1 and its 3:1 aspect ratio: the single golden coupe on LEFT with olive, basil and thin long stem, full glass, the little monochrome Lapa photo and filmstrip, wooden bar fading smoothly into empty dark olive texture across the center and right. The entire right 65% remains empty for HTML title and carousel. Match image 2's print styling: deeper warm shadows, rich but restrained amber/burgundy/olive, tangible vintage magazine paper, organic fine 35mm grain, subtly rubbed ink and a few faint natural paper creases. Do NOT add saturation, washed-out blacks, new objects, text, logos, UI, cards, bright collage edges or borders on the right. No seam or abrupt vertical boundary; one continuous integrated backdrop. Keep the cocktail crisp and realistic with a physically plausible rim and stem. This is a narrow photographic style-transfer edit, not a new composition. Output high resolution wide 3:1.\n",
+    "tool": "image_gen",
+    "styleReference": "assets/source/hero-home-desktop-supplied.png",
+    "usage": "Decorative artwork only; original menu, event cards and gallery photos preserved."
   }
 ]

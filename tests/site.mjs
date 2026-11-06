@@ -76,16 +76,7 @@ try {
   assert.equal(await page.locator('.drink-card[data-position="0"]').evaluate(el=>el===document.activeElement),true);
 
   await page.goto(`${base}/cardapio.html`); await ready();
-  await page.locator('#menu-search').fill('limão');
-  assert.ok(await page.locator('.searchable:visible').count()>=4,'Accent-sensitive search failed');
-  await page.locator('#menu-search').fill('limAO');
-  assert.ok(await page.locator('.searchable:visible').count()>=4,'Accent folding failed');
-  await page.locator('#menu-search').fill('espresso');
-  assert.equal(await page.locator('.searchable:visible').count(),1);
-  assert.match(await page.locator('.searchable:visible').textContent(),/Última Sessão/);
-  await page.locator('#menu-search').fill('qwerty-no-such-drink');
-  assert.equal(await page.locator('.empty-state').isVisible(),true);
-  await page.locator('[data-clear-menu]').click();
+  assert.equal(await page.locator('#menu-search').count(),0,'Menu search should be removed');
   await page.locator('[data-filter="petiscos"]').click();
   assert.equal(await page.locator('.menu-section:visible').count(),1);
   assert.equal(await page.locator('.menu-row:visible').count(),4);
@@ -188,5 +179,5 @@ try {
   await touchContext.close();
   await mkdir('.impeccable/review',{recursive:true});
   await writeFile('.impeccable/review/image-audit.json',JSON.stringify(imageAudit,null,2));
-  console.log('PASS search, filters, 6 cocktails, touch swipes, dialog keyboard/focus, event links, gallery, message validation/escaping, WhatsApp draft, calendar, FAQ, reduced motion and 2x image resolution.');
+  console.log('PASS filters, 6 cocktails, touch swipes, dialog keyboard/focus, event links, gallery, message validation/escaping, WhatsApp draft, calendar, FAQ, reduced motion and 2x image resolution.');
 } finally {await browser?.close();server.kill();}

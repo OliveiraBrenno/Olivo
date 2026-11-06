@@ -66,5 +66,57 @@
   "hero": {
     "width": 1672,
     "height": 941
+  },
+  "hero-home-mobile": {
+    "width": 909,
+    "height": 1730
+  },
+  "hero-home-mobile-vintage": {
+    "width": 909,
+    "height": 1730
+  },
+  "hero-home-desktop-vintage": {
+    "width": 1672,
+    "height": 941
+  },
+  "hero-home-desktop-vintage-portrait": {
+    "width": 1672,
+    "height": 941
+  },
+  "bossa-collage": {
+    "width": 1122,
+    "height": 1402
+  },
+  "hero-home-desktop-vintage-mockup": {
+    "width": 1672,
+    "height": 941
+  },
+  "cocktails-continuous": {
+    "width": 2172,
+    "height": 724
+  },
+  "hero-home-desktop-supplied": {
+    "width": 1672,
+    "height": 941
+  },
+  "hero-home-mobile-supplied": {
+    "width": 909,
+    "height": 1730
+  },
+  "lapa-vintage-decor": {
+    "width": 1536,
+    "height": 1024
+  },
+  "bossa-vintage-decor": {
+    "width": 1122,
+    "height": 1402
+  },
+  "cinema-vintage-decor": {
+    "width": 1536,
+    "height": 1024
+  },
+  "cocktails-continuous-vintage": {
+    "width": 2172,
+    "height": 724
   }
 }

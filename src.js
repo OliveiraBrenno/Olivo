@@ -37,14 +37,16 @@ dialog.addEventListener('click', event => {
   if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) dialog.close();
 });
 dialog.addEventListener('close', () => lastTrigger?.isConnected && lastTrigger.focus());
-document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+    closeMenu();
+    toggle.focus();
+  }
+});
 document.addEventListener('click', event => {
   const trigger = event.target.closest('[data-drink]');
   if (!trigger) return;
-  if (trigger.classList.contains('drink-card') && trigger.dataset.position !== '0') {
-    rotateDeck(Number(trigger.dataset.drink) - activeDrink);
-    return;
-  }
+  if (trigger.matches('a[href]')) return;
   const drink = drinks[Number(trigger.dataset.drink)];
   show(`<img class="detail-photo" src="${asset(drink.id)}" alt="${drink.name}" width="1122" height="1402"/><h2 id="dialog-title">${drink.name}</h2><p>${drink.description}</p><p>${drink.story}</p><p><strong>${money(drink.price)}</strong></p><div class="dialog-actions"><a class="ticket-button" href="./cardapio.html">Explorar o cardápio ${arrow}</a></div>`, trigger);
 });
@@ -94,32 +96,32 @@ if (page === 'index') {
   rotateDeck(0);
 }
 
-const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 function updateButtons(selector, value, key) {
   document.querySelectorAll(selector).forEach(button => button.setAttribute('aria-pressed', String(button.dataset[key] === value)));
 }
 
 if (page === 'cardapio') {
   let category = 'todos';
-  const search = document.querySelector('#menu-search');
   const sections = [...document.querySelectorAll('.menu-content [data-category]')];
   const mobile = window.matchMedia('(max-width: 700px)');
-  const setDisclosure = () => document.querySelectorAll('.menu-section').forEach(section => { section.open = !mobile.matches; });
+  const setDisclosure = () => document.querySelectorAll('.menu-section').forEach(section => { section.open = category === 'todos' || !mobile.matches; });
+  document.querySelectorAll('.menu-section > summary').forEach(summary => summary.addEventListener('click', event => { if (category === 'todos') event.preventDefault(); }));
   setDisclosure();
   mobile.addEventListener('change', setDisclosure);
   function filterMenu() {
-    const query = normalize(search.value.trim());
+    document.querySelectorAll('.menu-section').forEach(section => { if (category === 'todos') section.open = true; section.querySelector('summary').setAttribute('aria-disabled', String(category === 'todos')); });
+    document.querySelector('.menu-content').classList.toggle('show-all-categories', category === 'todos');
     let count = 0;
     for (const section of sections) {
       const categoryMatch = category === 'todos' || category === section.dataset.category || (category === 'classicos' && section.dataset.category === 'outros');
       let matches = 0;
       for (const item of section.querySelectorAll('.searchable')) {
-        const visible = categoryMatch && normalize(item.dataset.search).includes(query);
+        const visible = categoryMatch;
         item.hidden = !visible;
         if (visible) matches++;
       }
       section.hidden = !matches;
-      if (section.tagName === 'DETAILS' && matches && (query || category !== 'todos')) section.open = true;
+      if (section.tagName === 'DETAILS' && matches && category !== 'todos') section.open = true;
       count += matches;
     }
     document.querySelector('.menu-content .empty-state').hidden = count !== 0;
@@ -127,10 +129,7 @@ if (page === 'cardapio') {
     updateButtons('[data-filter]', category, 'filter');
   }
   document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => { category = button.dataset.filter; filterMenu(); }));
-  search.addEventListener('input', filterMenu);
-  document.querySelector('.search').addEventListener('submit', event => { event.preventDefault(); filterMenu(); });
-  document.querySelector('.search').addEventListener('reset', () => { search.value = ''; filterMenu(); search.focus(); });
-  document.querySelector('[data-clear-menu]').addEventListener('click', () => { category = 'todos'; search.value = ''; setDisclosure(); filterMenu(); search.focus(); });
+  document.querySelector('[data-clear-menu]').addEventListener('click', () => { category = 'todos'; setDisclosure(); filterMenu(); document.querySelector('[data-filter=todos]').focus(); });
   filterMenu();
 }
 
@@ -188,7 +187,6 @@ if (page === 'galeria') {
   document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => { category = button.dataset.filter; filterGallery(); }));
   tiles.forEach(tile => tile.addEventListener('click', () => showPhoto(Number(tile.dataset.gallery), tile)));
   document.querySelectorAll('[data-gallery-feature]').forEach(button => button.addEventListener('click', () => showPhoto(-1, button)));
-  document.querySelector('[data-show-backstage]').addEventListener('click', () => { category = 'bastidores'; filterGallery(); document.querySelector('.photo-grid').scrollIntoView({ block: 'center' }); });
   dialog.addEventListener('click', event => {
     if (event.target.closest('[data-photo-next]')) movePhoto(1);
     if (event.target.closest('[data-photo-previous]')) movePhoto(-1);
