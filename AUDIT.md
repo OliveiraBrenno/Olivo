@@ -1,6 +1,40 @@
 # Auditoria técnica — Olivo
 
-Data: 06/11/2026. Escopo: início, cardápio, programação, galeria e contato. Auditoria solicitada com `$impeccable audit`; nenhuma correção de interface aplicada.
+Data: 06/11/2026. Escopo: início, cardápio, programação, galeria e contato.
+
+Nota posterior: por solicitação do usuário, os painéis escuros do banner de programação foram removidos. A versão atual usa texto claro sem sombra ou contorno e reposicionamento no desktop. As medições de contraste abaixo registram a solução anterior com painel e não devem ser atribuídas à versão atual. Capturas atuais: `../artifacts/olivo-program-text-clean/`.
+
+## Correções implementadas e verificadas
+
+As oito recomendações da auditoria foram aplicadas. O relatório original abaixo fica preservado como histórico; suas prioridades descrevem a versão anterior, não pendências atuais.
+
+| Item | Alteração | Verificação |
+|---|---|---|
+| 1. Contraste | Fundo escuro localizado atrás do texto da programação, sem alterar a saturação da imagem | Subtítulo: mediana aproximada de 12,28:1 e P10 de 11,96:1; antes 3,64:1 e 2,85:1 |
+| 2. Texto ampliado | Blocos com altura flexível, quebras de título e ingresso em coluna própria no mobile | Cinco páginas com texto a 200% por CSS sem corte do H1 ou colisões verificadas; inspeção das capturas |
+| 3. Legibilidade | Texto funcional com piso de 14 px, campos de formulário com 16 px; colunas e alturas ajustadas | Nenhum alerta de texto minúsculo nos detectores renderizados desktop/mobile; verificação de larguras intermediárias |
+| 4. Reserva | Erros associados por aria-describedby, aria-invalid e foco no primeiro campo pendente | Testes de horário, quantidade de pessoas, correção e geração segura do rascunho |
+| 5. Assets | Glob limitado às 12 fotos usadas nos diálogos | Publicação cai de 89 WebP / 15.790.958 bytes para 65 / 9.664.258 bytes; origens preservadas |
+| 6. Tokens | tokens.css centraliza superfícies, ações, seleção, bordas e texto; remoção de declarações redundantes | CSS publicado cai de 102.657 para 58.924 bytes; cores literais distintas caem de 115 para 73, mantendo detalhes decorativos específicos |
+| 7. Contratos | Suíte CDP compartilhada substitui o teste obsoleto; PRODUCT, DESIGN e TESTING descrevem o comportamento atual | npm test: 104 verificações aprovadas, sem erros de JavaScript/recursos |
+| 8. Fontes | Preload da Bodoni itálica efetivamente usada nos títulos | Cinco páginas geradas com a face correta priorizada |
+
+A chamada **Ver programação**, na faixa **Em cartaz no Olivo**, agora tem posição própria, fonte maior, borda em vinho, seta e área de toque ampla. Preserva o papel amarelado e leva à programação completa. Desktop e mobile conferidos visualmente.
+
+### Reavaliação
+
+Pontuação heurística após as correções: **17/20** — acessibilidade 3/4, desempenho 3/4, temas/tokens 3/4, responsividade 4/4 e integridade 4/4. Esta nota considera o escopo verificado em Chromium; não representa certificação WCAG nem fidelidade pixel a pixel ao mockup.
+
+- Build de produção aprovado. JavaScript publicado: 16.751 bytes, antes 24.946 bytes.
+- Produção: 104 verificações aprovadas em oito larguras, incluindo paisagem, navegação, filtros, gestos, diálogos, recuperação do formulário e calendário interceptado em memória.
+- Revisão visual: cinco rotas em desktop e mobile, capturas com texto ampliado e nova medição localizada de contraste. Evidências em `../artifacts/olivo-audit-fixes/`, `../artifacts/olivo-audit-fixes-final/` e `../artifacts/olivo-production-tests/`.
+- Comparação adicional com os mockups originais: 10 capturas, diff e sobreposição em `../artifacts/olivo-audit-fixes-references/`; 40 verificações responsivas e oito de abertura/filtro do cardápio aprovadas. Diferença de pixels: home 78,26% desktop / 83,74% mobile; cardápio 76,43% / 82,21%; programação 80,20% / 77,53%; galeria 78,23% / 83,64%; contato 71,74% / 73,81%. As diferenças são substanciais: as referências antigas antecedem os banners fornecidos pelo usuário, a navegação comercial aprovada e os ajustes de legibilidade. Não se alteraram referências ou tolerâncias para ocultá-las, e esta entrega não alega reprodução exata dessas referências antigas.
+- Detector renderizado: alertas residuais de Bodoni itálica e perfurações de película correspondem à direção de arte aprovada; o alerta de sobreposição do logotipo usa caixas rotacionadas. Quebras de última palavra permanecem oportunidades pontuais de acabamento. Nenhuma exceção nova foi criada para suprimir resultados.
+- Limites: ampliação de texto simulada por CSS; sem teste em Safari/Firefox, leitor de tela, aparelho físico ou Core Web Vitals em campo. O formulário foi testado sem envio externo.
+
+## Auditoria original — histórico
+
+Auditoria solicitada com `$impeccable audit`, antes das correções acima.
 
 ## Veredito de integridade
 

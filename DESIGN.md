@@ -1,77 +1,65 @@
-# Autoridade visual
+# Olivo — sistema visual atual
 
-Reprodução da referência `mockup bar .png`, sem propor nova direção.
+## Autoridade e limites
 
-Esta base permanece a identidade Cinema na Lapa. A expansão usa as cinco composições em `Olivo_Cinema_na_Lapa/` e a redução de escala da home autorizada pelo usuário. As proporções abaixo registram a referência original; o contrato responsivo em Layout descreve a entrega atual.
+Preservar Cinema na Lapa e as cinco pranchas de `Olivo_Cinema_na_Lapa/`. As decisões posteriores do usuário prevalecem: banners desktop e mobile fornecidos, largura total, letreiros de HTML, papel levemente amarelado, fotos nítidas nos cards e artes decorativas com colagem vintage. As molduras de apresentação dos mockups não fazem parte da interface.
 
-Desktop: hero cinematográfico (proporção 795:470), seção oliva de coquetéis (795:295), faixa de programação em papel creme (795:135), história com fotografia da Lapa (795:166).
+## Identidade
 
-Mobile: hero compacto com retrato, marca no cabeçalho, título à esquerda e legenda à direita; cards horizontais; programação em três ingressos empilhados; seção sobre com título à esquerda. Manter informação legível ao adaptar a escala da referência.
+Oliva, vinho, âmbar, carvão e papel creme. Bodoni Moda em títulos editoriais, Great Vibes na marca, Barlow Condensed em ações/metadados e Inter em texto e formulário. Famílias locais; títulos e botões não são rasterizados. Preload de Bodoni itálica e Great Vibes, usados no primeiro viewport.
 
-Paleta: creme #efddba, vinho #701f14, laranja #c35c1d, oliva #3d3d24, carvão #161510. Display serif condensado de alto contraste, marca caligráfica, interface Inter. Texturas fotográficas e de papel extraídas da referência. Botões com contorno de ingresso, títulos recortados, cartões de drinks sobrepostos.
+## Tokens e superfícies
 
-## Layout
+`tokens.css` é a fonte de verdade das cores e materiais reutilizados. `style.css` contém layout, componentes, estados e breakpoints.
 
-O conjunto mantém a colagem de cinema, com retrato, Arcos da Lapa, faixas de papel e conteúdo em oliva. Todas as páginas ocupam a largura da janela, sem moldura externa. A home ocupa a primeira tela com `100svh` (fallback `100vh`); no celular, tem altura mínima de 540 px para preservar a leitura em janelas baixas. O título, a legenda e a ação têm espaços próprios; na horizontal entre 701 e 950 px a marca central sai para acomodar o cartaz e a chamada.
+| Papel | Tokens |
+|---|---|
+| Papel dos cards | `--card-paper`, `--texture-paper` |
+| Papel dos ingressos | `--program-paper` |
+| Botão sobre papel | `--paper-action`; hover/seleção `--paper-action-active` |
+| Texto claro/escuro | `--text-on-dark`, `--text-on-paper` |
+| Texto de apoio | `--text-muted-dark`, `--text-muted-paper` |
+| Superfície escura | `--surface-base`, `--surface-recessed`, `--surface-deep`, `--surface-content` |
+| História sobre foto | `--surface-about` |
+| Bordas e foco | `--border-paper`, `--border-paper-strong`, `--border-dark`, `--focus-color` |
+| Leitura e interação | `--type-body`, `--type-control`, `--control-height` |
 
-Até 700 px, controles têm pelo menos 44 px de altura; ações principais e campos do formulário têm 48 px. Textos de cards usam 14 px, textos corridos e campos usam 16 px. A busca não dispara zoom automático por fonte pequena no iOS. O carrossel usa uma área de 390 px de altura para acomodar descrições reais, com swipe horizontal e rolagem vertical preservada. A seção sobre reflui título, texto e ação; os cards de programação crescem com o conteúdo, e o ingresso do banner reserva largura própria. A agenda coloca horário e consulta abaixo do título. O formulário, os canais de contato e as orientações de transporte usam uma coluna. A navegação móvel tem altura limitada à janela e rolagem interna; Escape fecha o menu e devolve o foco ao botão. Cabeçalho e rodapé respeitam as áreas seguras do dispositivo.
+Botões sobre papel são apenas levemente mais escuros que o card. A chamada “Ver programação” usa esse mesmo papel, com tipografia maior, borda vinho e seta, abaixo do título da faixa no desktop e em largura total após os destaques no celular. Sinais de estado não dependem só de cor: foco, contorno e `aria-pressed` acompanham a interação. Valores locais de luz, sombra e impressão não são uma paleta alternativa de UI.
 
-As páginas internas compartilham fotografia de abertura, cabeçalho e marca; seus títulos caligráficos e controles são específicos de cada composição. O cardápio apresenta seis autorais em três colunas no desktop, categorias em papel e busca. Entre 701 e 950 px, o título dos autorais fica acima da grade, sem sobrepor as fotos. Até 700 px, os autorais viram uma lista com miniaturas e as categorias usam acordeões.
+## Layout e leitura
 
-A programação usa destaque, ingresso com data, filtros e agenda. No celular, os destaques e linhas da agenda refluem e a faixa de datas rola horizontalmente dentro da própria região. A galeria combina uma foto principal com texto em papel e uma grade assimétrica; no celular a grade tem duas colunas. O contato usa três colunas no desktop, formulário e canais no tablet, e uma coluna até 700 px. Localização e FAQ seguem o mesmo refluxo. Até 360 px há ajustes adicionais de tipografia, miniaturas e canais.
+- Todas as páginas ocupam a largura da janela. Não há limite de 1120 px nem margem externa de moldura.
+- A home conserva retrato e marca no desktop e o cenário vertical fornecido no mobile. No celular, título, faixa, legenda e ação têm fluxo vertical; o banner tem no mínimo uma tela e pode crescer com o conteúdo. O desktop preserva sua composição editorial.
+- As páginas internas mobile posicionam os títulos na área livre do céu. Seu contêiner cresce quando o texto aumenta. A programação usa título de largura total e ingresso em linha separada junto ao subtítulo no celular; descrição e ação vêm depois. O texto do destaque usa papel claro diretamente sobre a fotografia, sem painel, contorno ou sombra; no desktop, ocupa a região escura à direita do rosto.
+- A seção de coquetéis usa uma arte contínua em toda a largura no desktop: taça, balcão e papel oliva sob o texto e os cards. O carrossel é manual; fotos e texto continuam separados. A área de texto do card cresce e a foto utiliza o espaço restante.
+- A faixa da home reúne três eventos e a chamada explícita à programação. Em larguras intermediárias ela distribui título, eventos e ação em linhas próprias; no celular os eventos ficam empilhados.
+- Descrições, labels e metadados funcionais usam pelo menos 14 px; texto corrido mobile e campos usam 16 px quando aplicável. Colunas e cartões acomodam o texto sem esconder o final.
+- Breakpoint principal de 700 px. Tablet e desktop intermediário têm regras adicionais em 950/1100 px. Texto ampliado é verificado por renderização, não só por `scrollWidth`.
 
-## Components
+## Navegação e estados
 
-**Tipografia.** Bodoni Moda dá aos títulos o contraste de cartaz, Great Vibes escreve a marca e títulos internos, Barlow Condensed identifica ingressos, datas e ações, e Inter sustenta a leitura e os campos. As quatro famílias são locais. Não incorporar títulos aos bitmaps: a fotografia deve permitir texto HTML legível.
+A home conduz aos autorais e ao cardápio, aos eventos completos e à galeria. A chamada final da galeria conduz ao cardápio; o rodapé destaca contato.
 
-**Ingressos e cartões.** Ações mantêm contorno fino e pontilhado interno, rótulos em caixa alta e foco visível. Cartões de drinks combinam fotografia nítida e papel creme; a home preserva a sobreposição de três cartões visíveis e oferece seis opções, sem rotação automática. Botões, setas de teclado e gesto horizontal controlam a sequência; o gesto vertical continua a rolar a página. Detalhes e fotos ampliadas usam diálogo com fechamento por Escape e retorno de foco.
+O cardápio usa filtros de categoria, sem busca. Em Todos todas as categorias ficam abertas e não podem ser recolhidas; selecionar uma categoria permite o acordeão. Resultados e seleções são anunciados com estados acessíveis.
 
-**Filtros e estados.** Filtros distinguem seleção por preenchimento e forma, além de `aria-pressed`. Cardápio e agenda apresentam estado vazio e ação de restaurar resultados. A galeria filtra fotos por categoria. A navegação destaca a página atual; até 700 px abre por botão de menu.
+Menu mobile com `aria-expanded`, links acessíveis, Escape e retorno de foco. Alvos principais de pelo menos 44 px; ações e campos com altura de referência de 48 px. Cabeçalho e rodapé respeitam áreas seguras. A navegação se posiciona abaixo do cabeçalho mesmo quando o texto aumenta.
 
-**Formulário.** Campos em papel, borda terrosa e foco âmbar mantêm a linguagem da referência. No celular os campos têm texto de 16 px. A confirmação visual apresenta a mensagem preparada e ações explícitas de copiar, abrir WhatsApp e salvar lembrete quando houver visita futura. O texto explica que a reserva depende de confirmação.
+Os detalhes do cardápio e fotos ampliadas usam `dialog` nativo, fechamento por Escape e retorno de foco. Os autorais da home são links ao cardápio, não modais. Setas e swipe horizontal alternam os seis cards; o gesto vertical rola a página. Não há autoplay. Movimento reduzido preserva os estados sem animação.
 
-**Fotografia e movimento.** Fotografias geradas por IA preservam luz âmbar, sombras oliva/vinho e detalhes claros; os recortes responsivos mantêm copo, rosto e arcos reconhecíveis. Papel e oliva continuam como texturas discretas. Transições de estados duram cerca de 0,2 s; a pilha de drinks usa 0,45 s. Movimento reduzido remove transições e rolagem suave.
+## Contato
 
-## Do's and Don'ts
+O formulário prepara somente um rascunho. Não envia mensagens nem confirma reservas. Nome, telefone e e-mail são obrigatórios. Uma data de visita exige horário e quantidade; erros identificam os campos com `aria-invalid` e `aria-describedby` e focam o primeiro campo pendente. Corrigir o valor limpa seu estado de erro. A prévia é invalidada por novas edições.
 
-- **Do** preservar a identidade e as composições fornecidas ao adicionar telas, usando os contratos responsivos acima.
-- **Do** manter título e foto separados entre 701 e 950 px no cardápio, inclusive na transição de 700 para 701 px.
-- **Do** escolher imagens responsivas pela dimensão real da fonte, sem ampliar arquivos pequenos; manter a origem e o prompt rastreáveis.
-- **Don't** incorporar molduras de celular ou textos de apresentação das pranchas à página.
-- **Don't** apresentar imagens geradas, agenda, preços ou canais ilustrativos como registros comerciais confirmados.
+WhatsApp abre a escolha de destinatário; o lembrete de calendário não representa reserva confirmada. Textos e valores demonstrativos seguem identificados no produto.
 
-## Fluxo comercial
+## Assets e publicação
 
-A chamada da home aponta para a seção de autorais imediatamente após o banner. Os cards dos autorais são links para o cardápio completo, no desktop e no celular; os controles e gestos continuam alternando o carrossel. No celular também há chamada explícita ao cardápio abaixo do carrossel. Os destaques da home levam à programação completa. A seção final apresenta a galeria, cuja chamada final leva ao cardápio. O rodapé destaca contato com preenchimento de papel. As cenas da galeria têm moldura e legenda em papel amarelado, com ações num tom ligeiramente mais escuro; o cartaz Coquetéis em cena aparece apenas no desktop.
+Banners ativos: `hero-home-desktop-supplied` e `hero-home-mobile-supplied`. Artes decorativas: `lapa-vintage-decor`, `bossa-vintage-decor`, `cinema-vintage-decor` e `cocktails-continuous-vintage`. Originais e prompts ficam em `assets/source/` e no manifesto, inclusive versões anteriores para proveniência.
 
-## Banner mobile da home
+O build publica apenas imagens referenciadas pelo HTML e as doze fotos de 1440 px necessárias aos diálogos. A importação ampla de todo o diretório de fotos foi removida. Não apagar originais para reduzir o pacote publicado.
 
-Até 700 px a home usa uma fotografia vertical própria: coquetéis em primeiro plano, Arcos da Lapa e cinema ao fundo, com espaço escuro para o cartaz HTML. Origem: assets/source/hero-home-mobile-v1.png; prompt integral no arquivo adjacente .prompt.txt e no manifesto. Gerada com image_gen como imagem conceitual. Variantes WebP de 640 e 900 px, sem ampliação. O desktop e as páginas internas preservam os banners existentes.
+## Validação
 
-## Banners vintage da home
+`npm run build` gera as páginas e o pacote Vite. `npm test` utiliza `../scripts/olivo-site-test.mjs` da infraestrutura compartilhada, com Node e Chrome/CDP, sem Playwright. Testa produção em várias larguras, texto a 200%, filtros, links, teclado, retorno de foco, erros do formulário e toque sintetizado. Artefatos em `../artifacts/olivo-production-tests/`.
 
-A home usa duas artes próprias: hero-home-desktop-vintage e hero-home-mobile-vintage. Ambas foram geradas com image_gen a partir da direção de impressão do mockup 01: retícula offset, fibras de papel envelhecido, tintas em oliva, vinho e ocre e recortes de cartazes. Drinks, Arcos da Lapa e cinema são os temas. Os fundos não contêm títulos rasterizados; a tipografia e as ações continuam em HTML. Origens, dimensões, prompts completos e variantes sem ampliação estão no manifesto e em assets/source/. As páginas internas mantêm suas imagens anteriores.
-
-## Correção do conceito desktop e drink dourado
-
-O banner desktop da home usa hero-home-desktop-vintage-portrait, preservando a mulher, seu rosto, posição e os Arcos da Lapa do conceito original. Acabamento com recortes, papel envelhecido e impressão vintage. A coluna decorativa da seção de coquetéis usa bossa-collage, gerada a partir da foto fornecida pelo usuário, com taça dourada, película, papel rasgado e foto da Lapa. O banner mobile e as fotografias dos cards do cardápio/galeria permanecem como estavam. Fontes e prompts completos estão em assets/source/ e no manifesto.
-
-## Banner desktop aproximado à referência
-
-A arte desktop ativa é hero-home-desktop-vintage-mockup: mulher à esquerda, recorte de retrato na margem esquerda, Arcos da Lapa à direita, céu vinho e vegetação. Fundo com sombras profundas próprias da geração e sem reforço adicional de saturação ou filtro de contraste CSS. A argola recebeu correção localizada para uma única forma oval. O texto continua em HTML. Prompts e variantes registrados no manifesto.
-
-## Fundo contínuo dos coquetéis
-
-A seção desktop de coquetéis usa cocktails-continuous (2172×724 px) como uma única imagem de fundo em toda sua largura: taça e colagens à esquerda, balcão e papel oliva contínuos ao centro e à direita. Título, descrição, ação e carrossel permanecem componentes HTML sobre a arte. A imagem não contém texto nem cards rasterizados. Prompts e fonte em assets/source/; variantes de 960, 1440 e 2172 px no manifesto.
-
-## Banners fornecidos pelo usuário
-
-A home passa a usar os arquivos enviados pelo usuário: hero-home-desktop-supplied (1672×941 px) e hero-home-mobile-supplied (909×1730 px). Os PNGs de origem foram copiados sem alteração para assets/source/; o site usa exportações WebP responsivas, sem ampliação ou filtros adicionais de cor. A origem está identificada como user-supplied no manifesto. Textos e controles seguem em HTML.
-
-## Banners e imagens decorativas em todas as páginas
-
-As cinco páginas compartilham uma única definição de banner responsivo com os arquivos desktop e mobile enviados pelo usuário. O enquadramento desktop das páginas internas mostra o rosto e o céu, sem filtros adicionais de saturação. As imagens decorativas lapa-vintage-decor (sobre e FAQ), bossa-vintage-decor (apoio de contato), cinema-vintage-decor (foto de apoio do banner de programação) e cocktails-continuous-vintage (fundo contínuo dos coquetéis) foram tratadas com image_gen usando o banner aprovado como referência de papel, grão, desgaste, sombras e paleta. As fotografias dos itens do cardápio, dos cards de eventos e da galeria continuam com seus arquivos originais. As quatro artes e seus prompts completos estão em assets/source/ e no manifesto.
-
-## Letreiros mobile e navegação do cardápio
-
-No celular, os letreiros das páginas internas são alinhados à esquerda, a partir de 120 px do topo e 12% da largura, sobre a área livre do céu do banner enviado. A programação mantém título e ingresso em colunas separadas, seguidos pela descrição e ação. O cardápio deixa de ter barra de pesquisa em todas as telas; os filtros de categorias e a abertura obrigatória na seleção Todos permanecem funcionais.
+Conferência visual compartilhada: `../scripts/olivo-all-banner-review.mjs`, `olivo-mobile-review.mjs` e `olivo-technical-audit.mjs`. Preservar as referências originais e registrar diferenças intencionais; nenhuma captura vira mockup aprovado automaticamente. Testes em Chromium não substituem Safari, leitor de tela e dispositivos físicos.

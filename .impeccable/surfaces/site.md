@@ -12,7 +12,7 @@ OWN-WORLD: oliva, papel creme, vinho e âmbar; títulos Bodoni, marca Great Vibe
 
 STORY: conhecer o bar, explorar seis autorais e o cardápio completo, escolher uma experiência, ver as cenas e preparar contato.
 
-FIRST VIEWPORT: home com retrato à esquerda, marca e título central, chamada à direita, conteúdo limitado a 1120 px; páginas internas com imagem compartilhada, título caligráfico e controles próprios. No celular, títulos e formulários refluem para uma coluna; cardápio em acordeões.
+FIRST VIEWPORT: home com retrato à esquerda, marca e título central, chamada à direita, conteúdo em toda a largura da janela; páginas internas com imagem compartilhada, título caligráfico e controles próprios. No celular, títulos e formulários refluem para uma coluna; cardápio com filtros, categorias abertas em Todos e detalhes recolhíveis apenas na seleção de uma categoria. A home e os banners internos devem acomodar texto ampliado sem sobreposições.
 
 FORM: as composições já foram escolhidas pelo usuário nas cinco pranchas. seed: none (user-provided mockups). Interação central: carrossel de seis drinks, sem rotação automática; transição curta com movimento reduzido respeitado.
 

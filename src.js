@@ -1,6 +1,6 @@
 import { drinks, events, gallery, money } from './data.js';
 
-const photos = import.meta.glob('./assets/photos/*.webp', { eager: true, query: '?url', import: 'default' });
+const photos = import.meta.glob('./assets/photos/{negroni,bossa,verde,spritz,leme,madrugada,lapa,bar,jazz,friends,samba,cinema}-1440.webp', { eager: true, query: '?url', import: 'default' });
 const asset = (name, size = 1440) => photos[`./assets/photos/${name}-${size}.webp`];
 const arrow = '<svg aria-hidden="true"><use href="#arrow"/></svg>';
 const page = document.body.dataset.page;
@@ -206,25 +206,50 @@ if (page === 'contato') {
   if (selectedEvent) form.elements.message.value = `Olá! Gostaria de saber mais sobre ${selectedEvent.slice(0,200)}.`;
   let preparedMessage = '';
   let visit = null;
-  form.addEventListener('input', () => { document.querySelector('.message-preview').hidden = true; });
+  const result = form.querySelector('.form-result');
+  function clearFieldError(field) {
+    field.removeAttribute('aria-invalid');
+    const ids = (field.getAttribute('aria-describedby') || '').split(' ').filter(id => id && id !== 'form-error');
+    if (ids.length) field.setAttribute('aria-describedby', ids.join(' '));
+    else field.removeAttribute('aria-describedby');
+  }
+  function reportError(message, fields) {
+    result.textContent = message;
+    fields.forEach(field => {
+      field.setAttribute('aria-invalid', 'true');
+      const ids = new Set((field.getAttribute('aria-describedby') || '').split(' ').filter(Boolean));
+      ids.add('form-error');
+      field.setAttribute('aria-describedby', [...ids].join(' '));
+    });
+    fields[0].focus();
+  }
+  form.addEventListener('input', event => {
+    if (event.target.matches('input, select, textarea')) clearFieldError(event.target);
+    if (!form.querySelector('[aria-invalid="true"]')) result.textContent = '';
+    document.querySelector('.message-preview').hidden = true;
+  });
   form.addEventListener('submit', event => {
     event.preventDefault();
-    const result = form.querySelector('.form-result');
+    [...form.elements].filter(field => field.matches('input, select, textarea')).forEach(clearFieldError);
+    result.textContent = '';
     const data = new FormData(form);
     const name = data.get('name').trim();
     const phone = data.get('phone').trim();
     if (!name || phone.replace(/\D/g, '').length < 8) {
-      result.textContent = 'Informe seu nome e um telefone com DDD para preparar a mensagem.';
-      (!name ? form.elements.name : form.elements.phone).focus(); return;
+      reportError('Informe seu nome e um telefone com DDD para preparar a mensagem.', [!name ? form.elements.name : form.elements.phone]);
+      return;
     }
     const date = data.get('date');
     const time = data.get('time');
     if (date && (!time || !data.get('people'))) {
-      result.textContent = 'Para planejar uma reserva, escolha também o horário e o número de pessoas.'; return;
+      const missing = [!time && form.elements.time, !data.get('people') && form.elements.people].filter(Boolean);
+      reportError('Para planejar uma reserva, escolha também o horário e o número de pessoas.', missing);
+      return;
     }
     const start = date && time ? new Date(`${date}T${time}`) : null;
     if (start && (Number.isNaN(start.getTime()) || start <= new Date())) {
-      result.textContent = 'Escolha uma data e um horário futuros para a visita.'; dateInput.focus(); return;
+      reportError('Escolha uma data e um horário futuros para a visita.', [dateInput, form.elements.time]);
+      return;
     }
     preparedMessage = [`Olá, Olivo! Meu nome é ${name}.`, `Telefone: ${phone}`, `E-mail: ${data.get('email').trim()}`, date ? `Visita: ${new Date(`${date}T12:00`).toLocaleDateString('pt-BR')} às ${time}, para ${data.get('people')} pessoa(s).` : '', data.get('message').trim()].filter(Boolean).join('\n');
     visit = start ? { start, people: data.get('people') } : null;

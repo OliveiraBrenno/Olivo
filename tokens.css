@@ -1,0 +1,35 @@
+/* Paleta e papéis semânticos compartilhados. */
+:root {
+  --cream: #efddba;
+  --paper: #ead4af;
+  --card-paper: #fff3d9;
+  --program-paper: #f5e3c4;
+  --red: #822818;
+  --olive: #383721;
+  --ink: #251b12;
+  --display: Bodoni,Georgia,serif;
+  --sans: Inter,Arial,sans-serif;
+  --paper-action: #f5e8ce;
+  --paper-action-active: #efe0c3;
+  --border-paper: #b39465;
+  --border-paper-strong: #86663f;
+  --border-dark: #a28142;
+  --text-on-dark: var(--cream);
+  --text-on-paper: var(--ink);
+  --text-muted-paper: #6c492c;
+  --text-muted-dark: #dac49c;
+  --focus-color: #f6b948;
+  --control-height: 48px;
+  --type-body: 14px;
+  --type-control: 14px;
+  --surface-base: #242719;
+  --surface-recessed: #202116;
+  --surface-deep: #15170f;
+  --surface-content: #33331f;
+  --surface-about: #30311e;
+  --surface-about-wash: #30311e6b;
+  --border-dark-soft: #a2814266;
+  --text-highlight: #ffcf76;
+  --texture-paper: url('./assets/paper.webp');
+  --texture-olive: url('./assets/olive.webp');
+}
