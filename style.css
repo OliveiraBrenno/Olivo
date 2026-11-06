@@ -4475,6 +4475,7 @@ dialog p, .prepared-message {
 .program-heading {
   grid-column: 1;
   grid-row: 1;
+  transform: none;
 }
 
 .program-heading h2 br {
