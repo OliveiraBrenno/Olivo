@@ -16,7 +16,7 @@ Cobertura:
 - Cinco rotas em 320, 390, 700, 701, 720, 844, 1440 e 1920 px; 844 px também em paisagem.
 - Banners corretos, um H1 por página, controles mobile, imagens e ausência de erros de recursos/JavaScript.
 - Texto ampliado a 200% por CSS com verificação geométrica de colisão e capturas para inspeção. A largura de 720 px também cobre o refluxo equivalente a um desktop de 1440 px ampliado, sem alegar teste do menu de zoom do navegador.
-- Menu e Escape, chamada “Ver programação”, autorais levando ao cardápio, filtros, Todos aberto, diálogos e retorno de foco.
+- Menu e Escape, chamada “Ver programação”, autorais abrindo detalhes, clique lateral selecionando o drink, filtros, Todos aberto, diálogos e retorno de foco.
 - Swipe horizontal e rolagem vertical com eventos de toque sintetizados pelo CDP.
 - Erros de reserva ligados aos campos e recuperação com foco, rascunho seguro do WhatsApp e estrutura do lembrete de calendário. Não envia mensagens nem salva uma reserva; o download do teste é interceptado em memória.
 

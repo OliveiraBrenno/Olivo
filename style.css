@@ -172,8 +172,8 @@ section {
   min-height: 44px;
   padding: 10px 20px;
   border: 1px solid var(--border-paper);
-  outline: 1px dashed #c7a66c;
-  outline-offset: -4px;
+  outline: 2px dashed #e3c88f;
+  outline-offset: -5px;
   background: #222516a6;
   color: var(--cream);
   font: 500 14px/1.2 Barlow,var(--sans);
@@ -1824,7 +1824,8 @@ dialog p {
   width: 100%;
   max-height: 53dvh;
   object-fit: contain;
-  background: #181910;
+  background: var(--card-paper) var(--texture-paper);
+  background-blend-mode: multiply;
 }
 
 .dialog-actions {
@@ -1835,8 +1836,36 @@ dialog p {
 }
 
 .dialog-actions .ticket-button {
-  background: var(--olive);
-  color: var(--cream);
+  background: var(--paper-action) var(--texture-paper);
+  background-blend-mode: multiply;
+  color: var(--ink);
+  border-color: var(--border-paper);
+  outline-color: var(--border-paper-strong);
+}
+
+@media (min-width: 701px) and (min-height: 500px) {
+  .drink-detail #dialog-content {
+    display: grid;
+    grid-template-columns: minmax(0, 42%) minmax(0, 1fr);
+    column-gap: 28px;
+    align-items: start;
+    align-content: center;
+  }
+  .drink-detail .detail-photo {
+    grid-row: 1 / 7;
+    height: min(52dvh, 390px);
+    max-height: none;
+    object-fit: cover;
+  }
+  .drink-detail h2 {
+    margin: 12px 38px 8px 0;
+  }
+  .drink-detail p {
+    margin: 7px 0;
+  }
+  .drink-detail .dialog-actions {
+    margin-top: 12px;
+  }
 }
 
 .lightbox-nav {
@@ -4007,7 +4036,7 @@ dialog p, .prepared-message {
   background-blend-mode: multiply;
   color: var(--ink);
   border-color: var(--border-paper);
-  outline-color: var(--border-paper);
+  outline-color: var(--border-paper-strong);
 }
 
 .gallery-content .backstage .ticket-button {
@@ -4513,4 +4542,20 @@ dialog p, .prepared-message {
 .agenda-row {
   grid-template-columns: 50px 54px minmax(0,1fr);
 }
+}
+
+/* Recortes de ingresso: o fundo aparece através do picote nas laterais. */
+.ticket-button:not(.backstage .ticket-button) {
+  -webkit-mask:
+    radial-gradient(circle at 0 7px, transparent 3.5px, #000 4px) left / 51% 14px repeat-y,
+    radial-gradient(circle at 100% 7px, transparent 3.5px, #000 4px) right / 51% 14px repeat-y;
+  mask:
+    radial-gradient(circle at 0 7px, transparent 3.5px, #000 4px) left / 51% 14px repeat-y,
+    radial-gradient(circle at 100% 7px, transparent 3.5px, #000 4px) right / 51% 14px repeat-y;
+}
+
+/* Costura interna: acompanha o contraste do texto e fica afastada dos recortes. */
+.ticket-button:not(.backstage .ticket-button):not(:focus-visible) {
+  outline: 2px dashed color-mix(in srgb, currentColor 60%, transparent);
+  outline-offset: -7px;
 }

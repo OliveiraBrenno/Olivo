@@ -44,7 +44,7 @@ O cardápio usa filtros de categoria, sem busca. Em Todos todas as categorias fi
 
 Menu mobile com `aria-expanded`, links acessíveis, Escape e retorno de foco. Alvos principais de pelo menos 44 px; ações e campos com altura de referência de 48 px. Cabeçalho e rodapé respeitam áreas seguras. A navegação se posiciona abaixo do cabeçalho mesmo quando o texto aumenta.
 
-Os detalhes do cardápio e fotos ampliadas usam `dialog` nativo, fechamento por Escape e retorno de foco. Os autorais da home são links ao cardápio, não modais. Setas e swipe horizontal alternam os seis cards; o gesto vertical rola a página. Não há autoplay. Movimento reduzido preserva os estados sem animação.
+Os detalhes do cardápio e fotos ampliadas usam `dialog` nativo, fechamento por Escape e retorno de foco. Na home, clicar no drink em destaque abre seus detalhes; clicar em um dos cards laterais o traz à frente. Os três cards visíveis são acessíveis por teclado. As chamadas explícitas continuam levando ao cardápio. Setas e swipe horizontal também alternam os seis cards; o gesto vertical rola a página. Não há autoplay. Movimento reduzido preserva os estados sem animação.
 
 ## Contato
 

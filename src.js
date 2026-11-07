@@ -36,7 +36,7 @@ dialog.addEventListener('click', event => {
   const rect = dialog.getBoundingClientRect();
   if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) dialog.close();
 });
-dialog.addEventListener('close', () => lastTrigger?.isConnected && lastTrigger.focus());
+dialog.addEventListener('close', () => { dialog.classList.remove('drink-detail'); if (lastTrigger?.isConnected) lastTrigger.focus(); });
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
     closeMenu();
@@ -46,8 +46,13 @@ document.addEventListener('keydown', event => {
 document.addEventListener('click', event => {
   const trigger = event.target.closest('[data-drink]');
   if (!trigger) return;
-  if (trigger.matches('a[href]')) return;
+  if (trigger.classList.contains('drink-card') && Number(trigger.dataset.drink) !== activeDrink) {
+    rotateDeck(Number(trigger.dataset.drink) - activeDrink);
+    trigger.focus({ preventScroll: true });
+    return;
+  }
   const drink = drinks[Number(trigger.dataset.drink)];
+  dialog.classList.add('drink-detail');
   show(`<img class="detail-photo" src="${asset(drink.id)}" alt="${drink.name}" width="1122" height="1402"/><h2 id="dialog-title">${drink.name}</h2><p>${drink.description}</p><p>${drink.story}</p><p><strong>${money(drink.price)}</strong></p><div class="dialog-actions"><a class="ticket-button" href="./cardapio.html">Explorar o cardápio ${arrow}</a></div>`, trigger);
 });
 
@@ -57,7 +62,8 @@ function rotateDeck(direction) {
   document.querySelectorAll('.drink-card').forEach((card, index) => {
     const position = (index - activeDrink + drinks.length) % drinks.length;
     card.dataset.position = position;
-    card.tabIndex = position === 0 ? 0 : -1;
+    card.tabIndex = position <= 2 ? 0 : -1;
+    card.setAttribute('aria-label', `${position === 0 ? 'Ver detalhes de' : 'Selecionar'} ${drinks[index].name}`);
     card.inert = position > 2;
     card.setAttribute('aria-hidden', String(position > 2));
   });

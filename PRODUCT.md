@@ -10,7 +10,7 @@ Site de apresentação do Olivo Bar, na Lapa, com coquetéis, programação cult
 ## Brand commitments
 A imagem `/Users/Brenno/Desktop/mockup bar .png` estabeleceu a identidade Cinema na Lapa. As cinco pranchas fornecidas em `Olivo_Cinema_na_Lapa/` orientam a expansão atual. Preservar a linguagem cinematográfica, a paleta terrosa, o papel, a marca caligráfica e as composições internas. As pranchas externas de apresentação e as molduras de telefone não fazem parte da página.
 
-A versão atual ocupa toda a largura da janela. A home apresenta um banner de primeira tela, autorais com acesso ao cardápio, destaques com acesso à programação e uma chamada para a galeria. Os banners desktop e mobile enviados pelo usuário são compartilhados pelas cinco páginas. Fotos dos itens e da galeria permanecem separadas das artes decorativas. Manter os textos, preços e funcionalidades ao adaptar o layout para celular, tablet, desktop e texto ampliado.
+A versão atual ocupa toda a largura da janela. A home apresenta um banner de primeira tela, autorais com visualização dos itens e chamada ao cardápio, destaques com acesso à programação e uma chamada para a galeria. Os banners desktop e mobile enviados pelo usuário são compartilhados pelas cinco páginas. Fotos dos itens e da galeria permanecem separadas das artes decorativas. Manter os textos, preços e funcionalidades ao adaptar o layout para celular, tablet, desktop e texto ampliado.
 
 ## Implementation decisions
 HTML, CSS e JavaScript com Vite, na pasta Olivo. `data.js` fornece o conteúdo compartilhado; o gerador produz os cinco arquivos HTML antes do build.
